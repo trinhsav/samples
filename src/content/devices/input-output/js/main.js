@@ -9,12 +9,14 @@
 'use strict';
 
 const videoElement = document.querySelector('video');
+const videoElement2 = document.querySelector('video2');
 const audioInputSelect = document.querySelector('select#audioSource');
 const audioOutputSelect = document.querySelector('select#audioOutput');
 const videoSelect = document.querySelector('select#videoSource');
 const selectors = [audioInputSelect, audioOutputSelect, videoSelect];
 
 audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
+console.log(videoSelect);
 
 function gotDevices(deviceInfos) {
   // Handles being called several times to update labels. Preserve values.
